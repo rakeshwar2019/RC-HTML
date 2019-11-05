@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>REALTIME CONTRACTOR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/datepicker.css" />
+<link rel="stylesheet" href="dist/tagify.css">
+
+<!-- New Style Sheet -->
+<link rel="stylesheet" type="text/css" href="css/new_style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+ 
+</head>
+<body>
+
+<!-- MultiStep Form -->
+<header class="sticky-top">
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark">
+<a class="navbar-brand" href="index.html">
+<img src="images/rc-logo.png" class="img-fluid">
+</a>
+<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="navbar-collapse collapse" id="navbarsExample05" style="">
+<ul class="navbar-nav ml-auto text-uppercase">
+  <li class="nav-item active">
+    <a class="nav-link" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23.514" viewBox="0 0 20 23.514">
+        <g id="Group_14" data-name="Group 14" transform="translate(0 0)">
+          <path id="Path_9" data-name="Path 9" d="M142.078,12.67h.156a4.493,4.493,0,0,0,3.433-1.485c1.875-2.113,1.563-5.736,1.529-6.082A4.968,4.968,0,0,0,144.834.687,5.414,5.414,0,0,0,142.215,0h-.083a5.422,5.422,0,0,0-2.62.667A4.971,4.971,0,0,0,137.121,5.1c-.034.346-.346,3.968,1.529,6.082A4.475,4.475,0,0,0,142.078,12.67Zm-3.657-7.445c0-.015,0-.029,0-.039.161-3.491,2.639-3.866,3.7-3.866h.058c1.315.029,3.55.565,3.7,3.866a.1.1,0,0,0,0,.039c0,.034.346,3.345-1.2,5.088a3.191,3.191,0,0,1-2.508,1.042h-.049a3.181,3.181,0,0,1-2.5-1.042C138.086,8.58,138.417,5.254,138.422,5.225Z" transform="translate(-132.163)" fill="#0d9bff"/>
+          <path id="Path_10" data-name="Path 10" d="M56.072,265.3v-.015c0-.039,0-.078,0-.122-.029-.964-.093-3.219-2.206-3.939l-.049-.015a14.05,14.05,0,0,1-4.041-1.841.657.657,0,1,0-.755,1.076,15.166,15.166,0,0,0,4.446,2.03c1.135.4,1.261,1.617,1.3,2.727a.978.978,0,0,0,0,.122,8.839,8.839,0,0,1-.1,1.5,17.92,17.92,0,0,1-8.584,2,18.022,18.022,0,0,1-8.589-2,8.367,8.367,0,0,1-.1-1.5c0-.039,0-.078,0-.122.034-1.11.161-2.323,1.3-2.727a15.307,15.307,0,0,0,4.446-2.03.657.657,0,0,0-.755-1.076,13.9,13.9,0,0,1-4.041,1.841l-.049.015c-2.113.726-2.177,2.98-2.206,3.939a.978.978,0,0,1,0,.122v.015a7.467,7.467,0,0,0,.248,2.206.625.625,0,0,0,.253.307,18.417,18.417,0,0,0,9.5,2.327,18.473,18.473,0,0,0,9.5-2.327.652.652,0,0,0,.253-.307A7.834,7.834,0,0,0,56.072,265.3Z" transform="translate(-36.073 -246.621)" fill="#0d9bff"/>
+        </g>
+      </svg>
+
+    </a>
+  </li>
+<!-- <li class="nav-item active">
+<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">My Jobs</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">My Money</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Messages</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Network</a>
+</li> -->
+<!--li class="nav-item post-job">
+<a class="nav-link" href="#">Post a job</a>
+</li-->
+</ul>
+</div>
+</nav>
+   </div>
+</header>
+<div class="container">
+  <form id="msform">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="complete-head" id="top">Create Your Profile</h1>
+      </div>
+    </div>
+    <ul id="progressbar">
+      <li class="active"><span class="progressbar-heading">Your Experience</span></li>
+      <li><span class="progressbar-heading">Your Requirements</span></li>
+      <li><span class="progressbar-heading">Your Profile Display</span></li>
+    </ul>
+    <fieldset>
+      <section class="comp-pro comp_radio">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="input-heading">Select your professional category</label>
+              <select class="form-control in_sing" required="">
+                <option value="">Select</option>
+                <option value="Actuarial">Actuarial</option>
+                <option value="Risk Management">Risk Management</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Risk Management">Compliance</option>
+                <option value="Data Science">Technology</option>
+                <option value="Risk Management">Finance & Accounting</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="input-heading">Professional Expertise</label>
+              <ul class="checkk-outer">
+                <li>
+                  <label class="check-control">One
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-control">Two
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-control">Three
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-control">Four
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Which industry sector(s) are you experienced in?</label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <section id='outside-of-the-box'>
+                    <input name='tags-outside' class='tagify--outside tag-btn' value=' Lorem Ipsum,  Ipsum,' placeholder='Industry Sector Experience'>
+            </section>
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">What are your professional areas of expertise? </label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <section id='outside-of-the-box1'>
+                    <input name='tags-outside1' class='tagify--outside1 tag-btn' value='Tag1, Tag2, Tag3' placeholder='Industry Sector Experience'>
+            </section>
+
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-6">
+            <div class="basic_to_expert">
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="input-heading">Rate your professional expertise</label>
+                </div>
+              </div>
+              <div class="hour_rate hour_rate-basic">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="head_basic">Lorem Ipsum</p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="search_basic">
+                      <input type="range" name="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hour_rate hour_rate-basic">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="head_basic">Ipsum</p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="search_basic">
+                      <input type="range" name="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Tell us about your professional qualification & education</label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Institution">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <input type="text" class="form-control date_field" data-field="date" readonly placeholder="From">
+              <div id="dtBox"></div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <input type="text" class="form-control date_field" data-field="date" readonly placeholder="To">
+              <div id="dtBox"></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Programme">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <a href="#" class="add-history"><i class="fa fa-plus"></i> Add Employer History</a>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Tell us about your employment history</label>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Company Name">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <ul class="permanant_radio clearfix">
+              <li>
+                <label class="permanant_contract">Permanent
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+               <li>
+                <label class="permanant_contract">Contract
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <input type="text" class="form-control date_field" data-field="date" readonly placeholder="From">
+              <div id="dtBox"></div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <input type="text" class="form-control date_field" data-field="date" readonly placeholder="To">
+              <div id="dtBox"></div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Basic Salary">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <select class="form-control" required="">
+                <option value="">Notice Period</option>
+                <option value="Risk Management">1 Week</option>
+                <option value="Data Science">15 Days</option>
+                <option value="Risk Management">1 Month</option>
+                <option value="Data Science">3 Months</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12 col-12">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Job Title">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Key Responsibilty">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <a href="#" class="add-history"><i class="fa fa-plus"></i> Add technical expertise</a>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Are you proficient with any software?</label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <section id='outside-of-the-box2'>
+                    <input name='tags-outside2' class='tagify--outside2 tag-btn' value='C++ USER, Taly' placeholder='Select software'>
+            </section>
+
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-6">
+            <div class="basic_to_expert">
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="input-heading">Rate your professional expertise</label>
+                </div>
+              </div>
+              <div class="hour_rate hour_rate-basic">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="head_basic">C++</p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="search_basic">
+                      <input type="range" name="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hour_rate hour_rate-basic">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="head_basic">Tally</p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="search_basic">
+                      <input type="range" name="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Do you have project management experience?</label>
+          </div>
+          <div class="col-md-12">
+            <ul class="permanant_radio clearfix">
+              <li>
+                <label class="permanant_contract">Yes
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+               <li>
+                <label class="permanant_contract">No
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Project title ">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="number" class="form-control" placeholder="How many people did you manage?">
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="form-group">
+              <textarea type="text" class="form-control" placeholder="About project"></textarea>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <a href="#" class="add-history"><i class="fa fa-plus"></i> Add technical expertise</a>
+          </div>
+        </div>
+      </section>
+      <input type="button" name="next" class="next common-btn toTop" value="Next"/>
+    </fieldset>
+  <fieldset>
+    <section class="comp-pro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <label class="input-heading">What is your daily rate expectation?</label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <section id='outside-of-the-boxs1'>
+                <input name='tags-outsides1' class='tagify--outsides1 tag-btn' value='$500-$800, $800-$1200' placeholder='$500-$800'>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-4 offset-md-4">
+            <p>You can only select 2 ranges</p>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Which country would you like to work in?</label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <section id='outside-of-the-boxs2'>
+                <input name='tags-outsides2' class='tagify--outsides2 tag-btn' value='Canada, India, England, Turkey' placeholder='Eg. USA'>
+              </section>
+            </div>
+          </div>
+        </div>
+         <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Which Cities Would You Prefer To Work In? </label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <section id='outside-of-the-boxs3'>
+                <input name='tags-outsides3' class='tagify--outsides3 tag-btn' value='Canada, India, England, Turkey' placeholder='Eg. New Delhi'>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50 comp_radio">
+          <div class="col-md-12">
+            <label class="input-heading">Will You Be Contracting Via Your Own Ltd Company?</label>
+          </div>
+          <div class="col-md-12">
+            <ul class="permanant_radio clearfix">
+              <li>
+                <label class="permanant_contract">Yes
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="permanant_contract">No
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12">
+            <div class="own_ltd">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <select class="form-control" required="">
+                      <option value="">Country of registration</option>
+                      <option value="Risk Management">India</option>
+                      <option value="Data Science">Canada</option>
+                      <option value="Risk Management">Usa</option>
+                      <option value="Data Science">Sweden</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Company Name">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Company registration number">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label class="input-heading">Details for receiving payments</label>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Account Name">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Account Number">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="IFCE Code">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <select class="form-control in_notice" required="">
+                      <option value="">Country Code</option>
+                      <option value="Risk Management">+91</option>
+                      <option value="Data Science">+1</option>
+                      <option value="Risk Management">+2</option>
+                      <option value="Data Science">+3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="BIC">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="IBAN">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50 comp_radio">
+          <div class="col-md-12">
+            <label class="input-heading">When can you start your next contract?</label>
+          </div>
+          <div class="col-md-12">
+            <ul class="permanant_radio clearfix">
+              <li>
+                <label class="permanant_contract">I am immediately available
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="permanant_contract">I am available in the future
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">How Early Can We Start Warming Thing Up For You? </label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control date_field" data-field="date" readonly placeholder="3 months ahead of my availability date">
+              <div id="dtBox"></div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <input type="text" class="form-control date_field" data-field="date" readonly placeholder="To">
+              <div id="dtBox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <input type="button" name="previous" class="previous common-btn toTop" value="Previous"/>
+    <input type="button" name="next" class="next common-btn toTop" value="Next"/>
+  </fieldset>
+  <fieldset>
+    <section class="comp-pro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="upload-btn-wrapper">
+              <button class="btn-upload"><img src="images/photo-camera.svg"> <span>Upload a file</span></button>
+              <input type="file" name="myfile" accept="image/*" />
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Add professional title</label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Title">
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Write professional overview </label>
+          </div>
+          <div class="col-md-8">
+            <div class="form-group">
+              <textarea type="text" class="form-control" placeholder="Highlight your top skills & interest "></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Language proficiency</label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <section id='outside-of-the-boxd1'>
+                <input name='tags-outsided1' class='tagify--outsided1 tag-btn' value='English, French' placeholder='EG. SPANISH'>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="row mg-t50">
+          <div class="col-md-12">
+            <label class="input-heading">Contact information (This will be kept private)</label>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <select class="form-control" required="">
+                <option value="">Country</option>
+                <option value="Risk Management">India</option>
+                <option value="Data Science">England</option>
+                <option value="Risk Management">USA</option>
+                <option value="Data Science">Sweden</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <select class="form-control" required="">
+                <option value="">State</option>
+                <option value="Risk Management">Punjab</option>
+                <option value="Data Science">Himachal</option>
+                <option value="Risk Management">Jammu</option>
+                <option value="Data Science">Delhi</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Zip Code">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Street Number">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Flat/House">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Location">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Contact Number">
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+      <input type="button" name="previous" class="previous common-btn toTop" value="Previous"/>
+    <input type="button" name="next" class="next common-btn toTop" value="Next"/>
+  </fieldset>
+
+  <fieldset>
+    <section class="comp-pro">
+      <div class="container">
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"/>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"/>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Select your professional category</label>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">Actuarial</div>
+          </div>
+        </div>
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"/>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"/>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Write professional overview </label>
+          </div>
+          <div class="col-md-12">
+            <ul class="review_tagify">
+              <li class="review_tagify_list">Lorem Ipsum</li> 
+              <li class="review_tagify_list">Ipsum</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"/>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"/>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Write professional overview </label>
+          </div>
+          <div class="col-md-12">
+            <ul class="review_tagify">
+              <li class="review_tagify_list list_default">Lorem Ipsum</li> 
+              <li class="review_tagify_list">Expert</li>
+              <li class="review_tagify_list list_default">Ipsum</li> 
+              <li class="review_tagify_list">Basic</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"/>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"/>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Tell us about your professional qualification & education</label>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">MIT College</div>
+          </div>
+          <div class="col-md-2">
+            <div class="review_input">22 Aug 2010</div>
+          </div>
+          <div class="col-md-2">
+            <div class="review_input">22 Aug 2013</div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">Masters in Business</div>
+          </div>
+        </div>
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"/>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"/>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Tell us about your employment history</label>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">Google Inc</div>
+          </div>
+          <div class="col-md-12">
+            <div class="perma_nent"><span class="review_in_box"></span> Permanent</div>
+          </div>
+          <div class="col-md-2">
+            <div class="review_input">23 Aug 2013</div>
+          </div>
+          <div class="col-md-2">
+            <div class="review_input">24 Aug 2018</div>
+          </div>
+          <div class="col-md-2">
+            <div class="review_input">$45,000</div>
+          </div>
+          <div class="col-md-2">
+            <div class="review_input">30 Days</div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="review_input">Analyst</div>
+              </div>
+              <div class="col-md-8">
+                <div class="review_key_resposibility">Key Responsibility</div>
+                <ul class="review_tagify">
+                  <li class="review_tagify_list">Lorem Ipsum</li> 
+                  <li class="review_tagify_list">Ipsum</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Are you proficient with any software?</label>
+          </div>
+          <div class="col-md-12">
+            <ul class="review_tagify">
+              <li class="review_tagify_list list_default">C++</li> 
+              <li class="review_tagify_list">Expert</li>
+              <li class="review_tagify_list list_default">Tally</li> 
+              <li class="review_tagify_list">Basic</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Do you have project management experience?</label>
+          </div>
+          <div class="col-md-12">
+            <div class="perma_nent"><span class="review_in_box"></span> Yes</div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">RC Design</div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">10</div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+             <div class="col-md-8">
+                <div class="review_input_area">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in replacerehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="review_input">Unyscape Project X</div>
+              </div>
+              <div class="col-md-4">
+                <div class="review_input">0</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="review_input_area">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">What is your daily rate expectation?</label>
+          </div>
+          <div class="col-md-12">
+            <ul class="review_tagify">
+              <li class="review_tagify_list">$500-$800</li> 
+              <li class="review_tagify_list">$800-$1200</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Which country would you like to work in?</label>
+          </div>
+          <div class="col-md-12">
+            <ul class="review_tagify">
+              <li class="review_tagify_list">Canada</li> 
+              <li class="review_tagify_list">India</li>
+              <li class="review_tagify_list">England</li> 
+              <li class="review_tagify_list">Turkey</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Which Cities Would You Prefer To Work In? </label>
+          </div>
+          <div class="col-md-12">
+            <ul class="review_tagify">
+              <li class="review_tagify_list">Tronto</li> 
+              <li class="review_tagify_list">Victoria</li>
+              <li class="review_tagify_list">Noida</li> 
+              <li class="review_tagify_list">London</li>
+              <li class="review_tagify_list">Istanbul</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Do you have project management experience?</label>
+          </div>
+          <div class="col-md-12">
+            <div class="perma_nent"><span class="review_in_box"></span> Yes</div>
+          </div>
+          <div class="col-md-12">
+            <div class="review_card_group">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="review_input">India</div>
+                </div>
+                <div class="col-md-4">
+                  <div class="review_input">Unyscape</div>
+                </div>
+                <div class="col-md-4">
+                  <div class="review_input">UNSJF8237X2348</div>
+                </div>
+                <div class="col-md-12">
+                  <label class="input-heading">Details for receiving payments</label>
+                </div>
+                <div class="col-md-4">
+                  <div class="review_input">Unyscape Infocom</div>
+                </div>
+                <div class="col-md-4">
+                  <div class="review_input">54XX XXXX XXX X124</div>
+                </div>
+                <div class="col-md-4">
+                  <div class="review_input">DSD54123</div>
+                </div>
+                <div class="col-md-4">
+                  <div class="review_input">DSCGE12</div>
+                </div>
+                <div class="col-md-4">
+                  <div class="review_input">ASDVVB</div>
+                </div>
+                <div class="col-md-4">
+                  <div class="review_input">AGDEAG</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">When can you start your next contract?</label>
+          </div>
+          <div class="col-md-12">
+            <div class="perma_nent"><span class="review_in_box"></span> I am available in the future</div>
+          </div>
+        </div>
+
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">How early can we start warming thing up for you? </label>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">3 months ahead of my availability date</div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">23 Oct 2019</div>
+          </div>
+        </div>
+
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Add professional title</label>
+          </div>
+          <div class="col-md-1">
+            <div class="sr_img"><img src="images/risk-analyst.jpg"></div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">Sr Risk Analyst</div>
+          </div>
+        </div>
+
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Write professional overview </label>
+          </div>
+          <div class="col-md-8">
+            <div class="review_input_area">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</div>
+          </div>
+        </div>
+
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Language proficiency</label>
+          </div>
+          <div class="col-md-12">
+            <ul class="review_tagify">
+              <li class="review_tagify_list">English</li> 
+              <li class="review_tagify_list">French</li>
+              <li class="review_tagify_list">Hindi</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Nationality</label>
+          </div>
+          <div class="col-md-12">
+            <ul class="review_tagify">
+              <li class="review_tagify_list">India</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mg-t30">
+          <div class="col-md-12 edit_icon_position">
+            <span class="review_edit_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.236" viewBox="0 0 18.328 18.236">
+                <g id="edit" transform="translate(0 -0.261)">
+                  <path id="Path_205" data-name="Path 205" d="M16.916,48.84a.456.456,0,0,0-.456.456v4.053a1.371,1.371,0,0,1-1.369,1.369H2.282A1.371,1.371,0,0,1,.913,53.349v-11.9a1.371,1.371,0,0,1,1.369-1.369H6.335a.456.456,0,1,0,0-.913H2.282A2.285,2.285,0,0,0,0,41.454v11.9a2.285,2.285,0,0,0,2.282,2.282H15.09a2.285,2.285,0,0,0,2.282-2.282V49.3A.456.456,0,0,0,16.916,48.84Zm0,0" transform="translate(0 -37.135)" fill="#0096ff"></path>
+                  <path id="Path_206" data-name="Path 206" d="M120.443.862a2.054,2.054,0,0,0-2.9,0l-8.144,8.144a.456.456,0,0,0-.117.2l-1.071,3.866a.456.456,0,0,0,.562.562l3.866-1.071a.456.456,0,0,0,.2-.117L120.979,4.3a2.056,2.056,0,0,0,0-2.9ZM110.389,9.3l6.665-6.665L119.2,4.787l-6.665,6.665Zm-.429.862,1.717,1.717-2.375.658Zm10.374-6.507-.484.484-2.15-2.15.484-.484a1.141,1.141,0,0,1,1.614,0l.536.536A1.143,1.143,0,0,1,120.333,3.658Zm0,0" transform="translate(-103.251)" fill="#0096ff"></path>
+                </g>
+              </svg>
+            </span>
+            <label class="input-heading">Contact information (This will be kept private)</label>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">India</div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">Uttar Pradesh</div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">201301</div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">123, Street</div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">Unyscape</div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">Near Birla</div>
+          </div>
+          <div class="col-md-4">
+            <div class="review_input">+91- 9874563210</div>
+          </div>
+        </div>
+
+
+
+
+
+
+        
+      </div>
+    </section>
+    <input type="submit" name="submit" class="submit common-btn toTop" value="Submit"/>
+  </fieldset>
+  </form>
+</div>
+       
+<!-- /.MultiStep Form -->
+
+
+
+
+
+
+
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 col-lg-6 col-md-6">
+        <h5 class="footer-heading">ABOUT US</h5>
+        <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
+
+        <h5 class="footer-heading md-t10">Address</h5>
+        <p class="footer-text">123, street, Someplace, Random Locality, Sweden</p>
+      </div>
+      <div class="col-xl-2 col-lg-6 col-md-6 p-10">
+        <h5 class="footer-heading">For Contractor</h5>
+        <ul class="f-quick-link">
+          <li><a href="#">Browse Jobs</a></li>
+          <li><a href="#">Add Resume</a></li>
+          <li><a href="#">Job Alerts</a></li>
+          <li><a href="#">My Bookmarks</a></li>
+        </ul>
+
+        <h5 class="footer-heading md-t10">For Employers</h5>
+        <ul class="f-quick-link">
+          <li><a href="#">search Contractor</a></li>
+          <li><a href="#">Post a Job</a></li>
+          <li><a href="#">Post a Task</a></li>
+          <li><a href="#">Plans &amp; Pricing</a></li>
+        </ul>
+      </div>
+      <div class="col-xl-2 col-lg-6 col-md-6 p-10">
+        <h5 class="footer-heading">Helpful Links</h5>
+        <ul class="f-quick-link">
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+
+        <h5 class="footer-heading md-t10">Account</h5>
+        <ul class="f-quick-link">
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="social-links">
+          <ul class="s-icons clearfix">
+            <li><a href="#"><div class="circle-shape"><i class="fa fa-facebook-f"></i></div></a></li>
+            <li><a href="#"><div class="circle-shape"><i class="fa fa-twitter"></i></div></a></li>
+            <li><a href="#"><div class="circle-shape"><i class="fa fa-whatsapp"></i></div></a></li>
+            <li><a href="#"><div class="circle-shape"><i class="fa fa-linkedin"></i></div></a></li>
+            <li><a href="#"><div class="circle-shape"><i class="fa fa-youtube"></i></div></a></li>
+            <li><a href="#"><div class="circle-shape"><i class="fa fa-pinterest-p"></i></div></a></li>
+            <li><a href="#"><div class="circle-shape"><i class="fa fa-google-plus"></i></div></a></li>
+          </ul>
+        </div>
+        <h5 class="footer-heading md-t10">Sign Up For a Newsletter</h5>
+        <p class="footer-text">Weekly breaking news, analysis and cutting edge advices on job searching.</p>
+
+        <div class="footer-input md-t10">
+          <input class="form-control footer-control" type="text">
+          <a href="#"><button type="button" class="search-btn f-submit-btn">SUBMIT</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<script type="text/javascript" src="js/datepicker.min.js"></script>
+<script type="text/javascript">
+         $(document).ready(function()
+         {
+           
+             $("#dtBox").DateTimePicker();
+           
+         });
+    </script>
+    <script>
+            // if IE, add IE tagify's polyfills
+            !function( d ) {
+                if( !d.currentScript ){
+                    var s = d.createElement( 'script' );
+                    s.src = 'dist/tagify.polyfills.min.js';
+                    d.head.appendChild( s );
+                }
+            }(document)
+        </script>
+        <script src="dist/tagify.js"></script>
+        <script src="dist/jQuery.tagify.min.js"></script>
+
+        <script data-name="outside-of-the-box">
+(function(){
+
+var input = document.querySelector('input[name=tags-outside]'),
+    // init Tagify script on the above inputs
+    tagify = new Tagify(input);
+
+    // add a class to Tagify's input element
+    tagify.DOM.input.classList.add('tagify__input--outside');
+
+    // re-place Tagify's input element outside of the <tags> element (tagify.DOM.scope), just before it
+    tagify.DOM.scope.parentNode.insertBefore(tagify.DOM.input, tagify.DOM.scope);
+
+})()
+</script>
+
+<script data-name="outside-of-the-box1">
+(function(){
+
+var input = document.querySelector('input[name=tags-outside1]'),
+    // init Tagify script on the above inputs
+    tagify = new Tagify(input);
+
+    // add a class to Tagify's input element
+    tagify.DOM.input.classList.add('tagify__input--outside1');
+
+    // re-place Tagify's input element outside of the <tags> element (tagify.DOM.scope), just before it
+    tagify.DOM.scope.parentNode.insertBefore(tagify.DOM.input, tagify.DOM.scope);
+
+})()
+</script>
+<script data-name="outside-of-the-box2">
+(function(){
+
+var input = document.querySelector('input[name=tags-outside2]'),
+    // init Tagify script on the above inputs
+    tagify = new Tagify(input);
+
+    // add a class to Tagify's input element
+    tagify.DOM.input.classList.add('tagify__input--outside2');
+
+    // re-place Tagify's input element outside of the <tags> element (tagify.DOM.scope), just before it
+    tagify.DOM.scope.parentNode.insertBefore(tagify.DOM.input, tagify.DOM.scope);
+
+})()
+</script>
+<script data-name="outside-of-the-boxs1">
+(function(){
+
+var input = document.querySelector('input[name=tags-outsides1]'),
+    // init Tagify script on the above inputs
+    tagify = new Tagify(input);
+
+    // add a class to Tagify's input element
+    tagify.DOM.input.classList.add('tagify__input--outsides1');
+
+    // re-place Tagify's input element outside of the <tags> element (tagify.DOM.scope), just before it
+    tagify.DOM.scope.parentNode.insertBefore(tagify.DOM.input, tagify.DOM.scope);
+
+})()
+</script>
+<script data-name="outside-of-the-boxs2">
+(function(){
+
+var input = document.querySelector('input[name=tags-outsides2]'),
+    // init Tagify script on the above inputs
+    tagify = new Tagify(input);
+
+    // add a class to Tagify's input element
+    tagify.DOM.input.classList.add('tagify__input--outsides2');
+
+    // re-place Tagify's input element outside of the <tags> element (tagify.DOM.scope), just before it
+    tagify.DOM.scope.parentNode.insertBefore(tagify.DOM.input, tagify.DOM.scope);
+
+})()
+</script>
+<script data-name="outside-of-the-boxs3">
+(function(){
+
+var input = document.querySelector('input[name=tags-outsides3]'),
+    // init Tagify script on the above inputs
+    tagify = new Tagify(input);
+
+    // add a class to Tagify's input element
+    tagify.DOM.input.classList.add('tagify__input--outsides3');
+
+    // re-place Tagify's input element outside of the <tags> element (tagify.DOM.scope), just before it
+    tagify.DOM.scope.parentNode.insertBefore(tagify.DOM.input, tagify.DOM.scope);
+
+})()
+</script>
+<script data-name="outside-of-the-boxd1">
+(function(){
+
+var input = document.querySelector('input[name=tags-outsided1]'),
+    // init Tagify script on the above inputs
+    tagify = new Tagify(input);
+
+    // add a class to Tagify's input element
+    tagify.DOM.input.classList.add('tagify__input--outsided1');
+
+    // re-place Tagify's input element outside of the <tags> element (tagify.DOM.scope), just before it
+    tagify.DOM.scope.parentNode.insertBefore(tagify.DOM.input, tagify.DOM.scope);
+
+})()
+</script>
+
+<script type="text/javascript">
+
+//jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+$(".next").click(function(){
+  if(animating) return false;
+  animating = true;
+  
+  current_fs = $(this).parent();
+  next_fs = $(this).parent().next();
+  
+  //activate next step on progressbar using the index of next_fs
+  $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+  
+  //show the next fieldset
+  next_fs.show(); 
+  //hide the current fieldset with style
+  current_fs.animate({opacity: 0}, {
+    step: function(now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale current_fs down to 80%
+      scale = 1 - (1 - now) * 0.2;
+      //2. bring next_fs from the right(50%)
+      left = (now * 50)+"%";
+      //3. increase opacity of next_fs to 1 as it moves in
+      opacity = 1 - now;
+      current_fs.css({
+        'transform': 'scale('+scale+')',
+        
+      });
+      next_fs.css({'left': left, 'opacity': opacity});
+    }, 
+    duration: 400, 
+    complete: function(){
+      current_fs.hide();
+      animating = false;
+    }, 
+    //this comes from the custom easing plugin
+    easing: 'easeInOutBack'
+  });
+});
+
+$(".previous").click(function(){
+  if(animating) return false;
+  animating = true;
+  
+  current_fs = $(this).parent();
+  previous_fs = $(this).parent().prev();
+  
+  //de-activate current step on progressbar
+  $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+  
+  //show the previous fieldset
+  previous_fs.show(); 
+  //hide the current fieldset with style
+  current_fs.animate({opacity: 0}, {
+    step: function(now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale previous_fs from 80% to 100%
+      scale = 0.8 + (1 - now) * 0.2;
+      //2. take current_fs to the right(50%) - from 0%
+      left = ((1-now) * 50)+"%";
+      //3. increase opacity of previous_fs to 1 as it moves in
+      opacity = 1 - now;
+      current_fs.css({'left': left});
+      previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+    }, 
+    duration: 400, 
+    complete: function(){
+      current_fs.hide();
+      animating = false;
+    }, 
+    //this comes from the custom easing plugin
+    easing: 'easeInOutBack'
+  });
+});
+
+$(".submit").click(function(){
+  return false;
+})
+
+</script>
+<script>
+  $(".toTop").click(function () {
+    //1 second of animation time
+    //html works for FFX but not Chrome
+    //body works for Chrome but not FFX
+    //This strange selector seems to work universally
+    $("html, body").animate({scrollTop: 0}, 1000);
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+</body>
+</html>
